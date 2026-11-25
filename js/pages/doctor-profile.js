@@ -1,6 +1,5 @@
 // doctor-profile.js - shows a doctor's own editable profile, or a
 // read-only public view of it when someone else opens the link
-
 document.addEventListener("DOMContentLoaded", () => {
   CC.UI.renderNavbar("home");
   const viewId = new URLSearchParams(window.location.search).get("id");
