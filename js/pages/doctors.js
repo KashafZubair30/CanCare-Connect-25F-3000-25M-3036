@@ -1,5 +1,4 @@
 // doctors.js - doctor directory with specialisation / hospital filters
-
 function render() {
   const spec = document.getElementById("filterSpec").value;
   const hospId = document.getElementById("filterHospital").value;
