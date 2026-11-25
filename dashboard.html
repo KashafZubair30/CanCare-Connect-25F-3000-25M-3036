@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Home</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+
+  <div class="container">
+    <h1 id="greeting">Find a hospital</h1>
+    <p id="subheading">Search hospitals, review equipment status, and view cost information in Pakistan.</p>
+
+    <div class="card mb-lg">
+      <h3>Find a hospital</h3>
+      <p class="caption">Search by city, cancer type, or machinery.</p>
+      <form
+        id="quickSearch"
+        class="flex"
+      >
+        <input
+          type="text"
+          id="quickQuery"
+          class="search-input"
+          placeholder="Find a hospital by city, cancer type, or machinery"
+        >
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >Search hospitals</button>
+      </form>
+      <p class="caption mt-sm">Cities: Lahore &middot; Faisalabad &middot; Islamabad &middot; Karachi</p>
+    </div>
+
+    <h2>Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Search Hospitals</h3>
+        <p>Search by city and cancer type.</p>
+        <a href="search.html">Search hospitals &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Estimate Cost</h3>
+        <p>View estimated treatment costs.</p>
+        <a href="estimate.html">View cost estimates &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Financial Aid</h3>
+        <p>View available assistance programs.</p>
+        <a href="aid.html">View financial aid &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Doctor Directory</h3>
+        <p>Search doctors by specialisation.</p>
+        <a href="doctors.html">View doctor directory &rarr;</a>
+      </div>
+    </div>
+
+    <div
+      id="myEstimates"
+      class="mt-lg"
+    ></div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+</body>
+</html>
