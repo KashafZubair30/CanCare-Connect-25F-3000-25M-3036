@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Hospital Search</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+
+  <div class="container">
+    <p class="caption"><a href="dashboard.html">Home</a> / Search hospitals</p>
+    <h1>Hospital search results</h1>
+    <p>Hospital directory for Pakistan. Equipment availability requires hospital confirmation.</p>
+
+    <div class="grid-sidebar">
+      <div class="card align-start">
+        <h3>Filters</h3>
+        <div class="field">
+          <label>City</label>
+          <select id="filterCity">
+            <option value="">All cities</option>
+            <option>Lahore</option>
+            <option>Faisalabad</option>
+            <option>Islamabad</option>
+            <option>Karachi</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Cancer type</label>
+          <select id="filterCancer">
+            <option value="">All cancer types</option>
+            <option>Breast Cancer</option>
+            <option>Lung Cancer</option>
+            <option>Leukemia</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Hospital type</label>
+          <select id="filterType">
+            <option value="">All types</option>
+            <option>Charity</option>
+            <option>Public sector</option>
+            <option>Government-funded</option>
+            <option>Private</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Machinery</label>
+          <div id="machineryChecks"></div>
+        </div>
+        <button
+          class="btn btn-primary btn-block"
+          id="applyFilters"
+        >Apply filters</button>
+      </div>
+
+      <div>
+        <div class="flex-between mb-sm">
+          <span
+            id="resultCount"
+            class="caption"
+          ></span>
+          <button
+            class="btn btn-secondary btn-sm"
+            id="compareBtn"
+            disabled
+          >Compare Selected (0)</button>
+        </div>
+        <div id="results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/search.js"></script>
+</body>
+</html>
