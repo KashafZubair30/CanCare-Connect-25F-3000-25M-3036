@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Estimate Treatment Cost</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+  <div class="container">
+    <h1>Estimate treatment cost</h1>
+    <p>Get an approximate cost range based on available hospital data.</p>
+
+    <div class="grid-2">
+      <div>
+        <div class="card mb-md">
+          <h3>Your details</h3>
+          <form id="estimateForm">
+            <div class="grid-2">
+              <div class="field">
+                <label>Cancer type</label>
+                <select id="fCancer">
+                  <option>Breast Cancer</option>
+                  <option>Lung Cancer</option>
+                  <option>Leukemia</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Stage</label>
+                <select id="fStage">
+                  <option>Early</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label>Treatment</label>
+                <select id="fTreatment">
+                  <option>Surgery</option>
+                  <option>Chemotherapy</option>
+                  <option>Radiotherapy</option>
+                  <option>Combination</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Hospital type</label>
+                <select id="fHospitalType">
+                  <option>Charity</option>
+                  <option>Public sector</option>
+                  <option>Government-funded</option>
+                  <option>Private</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>City</label>
+              <input
+                type="text"
+                id="fCity"
+                value="Lahore"
+              >
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >Calculate estimate</button>
+          </form>
+        </div>
+
+        <div
+          id="resultCard"
+          class="card hidden"
+        >
+          <h3>Estimated cost</h3>
+          <p
+            class="caption"
+            id="matchCaption"
+          ></p>
+          <h1
+            id="rangeText"
+            class="estimate-amount"
+          ></h1>
+
+          <h3 class="mt-sm">Breakdown</h3>
+          <div class="table-wrap">
+            <table id="breakdownTable"></table>
+          </div>
+
+          <p
+            id="outdatedNote"
+            class="text-error hidden"
+          >Note: some source data is older than 30 days and may be outdated.</p>
+
+          <p
+            class="caption mt-sm"
+            id="disclaimerText"
+          ></p>
+          <button
+            class="btn btn-secondary"
+            id="downloadBtn"
+          >Download as PDF</button>
+        </div>
+
+        <div
+          id="noMatchCard"
+          class="card hidden"
+        >
+          <p id="noMatchText"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How this works</h3>
+        <p>We match your selections against published hospital rates in our database and show the lowest and highest cost recorded.</p>
+        <p>If no exact match exists, we broaden the search by treatment type only.</p>
+        <p>Data older than 30 days is flagged as potentially outdated.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/estimator.js"></script>
+  <script src="js/pages/estimate.js"></script>
+</body>
+</html>
