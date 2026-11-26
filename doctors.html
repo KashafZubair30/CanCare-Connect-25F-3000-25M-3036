@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Doctor Directory</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+  <div class="container">
+    <h1>Doctor directory</h1>
+    <p>Browse oncologists by specialisation and hospital. PMDC verification status is shown on every profile.</p>
+
+    <div class="card mb-md">
+      <div class="grid-2">
+        <div class="field field-tight">
+          <label>Specialisation</label>
+          <select id="filterSpec"><option value="">All specialisations</option></select>
+        </div>
+        <div class="field field-tight">
+          <label>Hospital</label>
+          <select id="filterHospital"><option value="">All hospitals</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div id="doctorList"></div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/doctors.js"></script>
+</body>
+</html>
