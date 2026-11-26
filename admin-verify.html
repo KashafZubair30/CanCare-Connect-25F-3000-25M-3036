@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Admin: Verification Queue</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+  <div class="container">
+    <h1>Verification queue</h1>
+    <p>Review pending doctor and hospital representative accounts before approval.</p>
+    <h3 id="pendingCount"></h3>
+    <p class="caption">Accounts awaiting admin approval</p>
+    <div class="tabs">
+      <a
+        class="tab active"
+        href="admin-verify.html"
+      >Verification Queue</a>
+      <a
+        class="tab"
+        href="admin-data.html"
+      >Cost &amp; Aid Data</a>
+      <a
+        class="tab"
+        href="admin-users.html"
+      >Users &amp; Audit Log</a>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Role</th><th>Submitted details</th><th>Actions</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/admin-verify.js"></script>
+</body>
+</html>
