@@ -16,12 +16,12 @@ eligible for. There's also a login system with different roles: patients, doctor
 representatives, and an admin who verifies accounts and manages the data.
 
 It's a frontend-only project for this course, there's no real server or database. All the
-data (accounts, hospitals, doctors, cost records, aid programs) is stored in the browser's
+data (accounts, hospitals, doctors, cost records, aid programs) is stored in the browsers
 localStorage and gets seeded automatically the first time you open the site.
 
 ## Live site
 
-https://<your-github-username>.github.io/CanCare-Connect/
+<https://kashafzubair30.github.io/CanCare-Connect-25F-3000-25M-3036/>
 
 ## How to run it
 
