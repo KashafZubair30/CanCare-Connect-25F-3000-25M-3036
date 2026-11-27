@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+>
+<head>
+  <meta
+    charset="UTF-8"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CanCare Connect — Admin: Cost &amp; Aid Data</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  >
+</head>
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+  ></div>
+  <div class="container">
+    <h1>Cost &amp; aid data management</h1>
+    <div class="tabs">
+      <a
+        class="tab"
+        href="admin-verify.html"
+      >Verification Queue</a>
+      <a
+        class="tab active"
+        href="admin-data.html"
+      >Cost &amp; Aid Data</a>
+      <a
+        class="tab"
+        href="admin-users.html"
+      >Users &amp; Audit Log</a>
+    </div>
+
+    <div class="flex-between my-md">
+      <h3 class="m-0">Cost records</h3>
+      <button
+        class="btn btn-primary btn-sm"
+        id="addRecord"
+      >+ Add New Record</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Cancer type</th><th>Treatment</th><th>Hospital type</th><th>Range</th><th>Source</th><th>Source date</th><th></th></tr></thead>
+        <tbody id="costRows"></tbody>
+      </table>
+    </div>
+
+    <div class="flex-between my-md">
+      <h3 class="m-0">Financial aid programs</h3>
+      <button
+        class="btn btn-primary btn-sm"
+        id="addAidProgram"
+      >+ Add Aid Program</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Provider</th><th>Type</th><th>Last reviewed</th><th></th></tr></thead>
+        <tbody id="aidRows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Add Cost Record modal (simple inline form) -->
+  <div
+    id="modalBackdrop"
+    class="modal-backdrop"
+  >
+    <div class="card modal-card">
+      <h3>Add cost record</h3>
+      <div class="field">
+        <label>Cancer type</label>
+        <input
+          id="mCancer"
+          value="Breast Cancer"
+        >
+      </div>
+      <div class="field">
+        <label>Stage</label>
+        <input
+          id="mStage"
+          value="Early"
+        >
+      </div>
+      <div class="field">
+        <label>Treatment</label>
+        <input
+          id="mTreatment"
+          value="Surgery"
+        >
+      </div>
+      <div class="field">
+        <label>Hospital type</label>
+        <input
+          id="mHospType"
+          value="Private"
+        >
+      </div>
+      <div class="field">
+        <label>City</label>
+        <input
+          id="mCity"
+          value="Lahore"
+        >
+      </div>
+      <div class="field">
+        <label>Min cost (PKR)</label>
+        <input
+          id="mMin"
+          type="number"
+          value="10000"
+        >
+      </div>
+      <div class="field">
+        <label>Max cost (PKR)</label>
+        <input
+          id="mMax"
+          type="number"
+          value="20000"
+        >
+      </div>
+      <div class="field">
+        <label>Source</label>
+        <input
+          id="mSource"
+          value="Administrator entry"
+        >
+      </div>
+      <div class="flex">
+        <button
+          class="btn btn-secondary"
+          id="cancelModal"
+        >Cancel</button>
+        <button
+          class="btn btn-primary"
+          id="confirmModal"
+        >Add record</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Aid Program modal -->
+  <div
+    id="aidModalBackdrop"
+    class="modal-backdrop"
+  >
+    <div class="card modal-card">
+      <h3>Add aid program</h3>
+      <div class="field">
+        <label>Program name</label>
+        <input
+          id="aName"
+          value="New Aid Program"
+        >
+      </div>
+      <div class="field">
+        <label>Provider</label>
+        <input
+          id="aProvider"
+          value="Government of Punjab"
+        >
+      </div>
+      <div class="field">
+        <label>Type</label>
+        <input
+          id="aType"
+          value="Government-funded"
+        >
+      </div>
+      <div class="field">
+        <label>Eligibility</label>
+        <input
+          id="aEligibility"
+          value="Income below program threshold; referral required."
+        >
+      </div>
+      <div class="field">
+        <label>Contact</label>
+        <input
+          id="aContact"
+          value="Healthline 1700"
+        >
+      </div>
+      <div class="field">
+        <label>Source</label>
+        <input
+          id="aSource"
+          value="Administrator entry"
+        >
+      </div>
+      <div class="flex">
+        <button
+          class="btn btn-secondary"
+          id="cancelAidModal"
+        >Cancel</button>
+        <button
+          class="btn btn-primary"
+          id="confirmAidModal"
+        >Add program</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/admin-data.js"></script>
+</body>
+</html>
